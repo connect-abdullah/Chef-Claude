@@ -1,1 +1,0 @@
-export const API_TOKEN = import.meta.env.VITE_HUGGINGFACE_API_TOKEN 
