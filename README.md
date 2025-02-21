@@ -3,7 +3,7 @@
 Chef Claude is an AI-powered recipe suggestion app where users can input a list of available ingredients, and the app generates a recipe using some or all of those ingredients. The app leverages AI to provide creative and useful recipes, even with limited ingredients.
 
 ## 🚀 Live Demo  
-Check out **AI Cook** in action: [AI Cook](https://aicook.netlify.app/)  
+Check out **Chef Claude** in action: [Chef Claude](https://aicook.netlify.app/)  
 
 ## 🚀 Features
 - 📌 Enter available ingredients to get a recipe suggestion
