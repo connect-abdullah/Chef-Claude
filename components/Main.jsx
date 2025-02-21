@@ -55,7 +55,7 @@ export const Main = () => {
           name="ingredient"
           aria-label="Add ingredient"
           type="text"
-          placeholder="e.g oregano"
+          placeholder="e.g oregano (Minimum 4)"
         />
         <button type="submit">+ Add Ingredient</button>
       </form>
