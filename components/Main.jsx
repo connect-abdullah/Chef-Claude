@@ -37,12 +37,14 @@ export const Main = () => {
   
 // Function to get recipe from ai
   async function getRecipe() {
+        setRecipe("Loading..."); // Show loader
         try {
             const recipeMarkdown = await getRecipeFromMistral(ingredients);
             setRecipe(recipeMarkdown);
         } catch (error) {
             console.log(error.message)
             alert("An error occurred while fetching the recipe");
+            setRecipe(""); // Remove loader on error
         }
   }
 
