@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState , useRef, useEffect} from "react";
 import IngredientsList from "./IngredientsList";
 import ClaudeRecipe from "./ClaudeRecipe";
 import { getRecipeFromMistral } from "../ai"
@@ -34,6 +34,17 @@ export const Main = () => {
   }
 
   const [recipe, setRecipe] = useState("");
+  const recipeSection = useRef(null)
+
+  useEffect(() => {
+    if (recipe !== "" && recipeSection.current !== null) {
+      const yCoord = recipeSection.current.getBoundingClientRect().top + window.scrollY
+      window.scroll({
+          top: yCoord,
+          behavior: "smooth"
+      })
+    }
+}, [recipe])
   
 // Function to get recipe from ai
   async function getRecipe() {
@@ -66,7 +77,7 @@ export const Main = () => {
       }
 
       {/* when we click on get a recipe btn, only then it is shown */}
-      {recipe && <ClaudeRecipe recipe={recipe} />}
+      {recipe && <ClaudeRecipe recipe={recipe}  ref={recipeSection} />}
     </main>
   );
 };
